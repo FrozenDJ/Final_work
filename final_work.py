@@ -10,14 +10,16 @@
 [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 [“Russia”, “Denmark”, “Kazan”] → []
 """
-
-# array = input("Write your words: ").split()
+def main():
+    user_input = input("Enter your words with space: ").split()
+    print(user_input)
+    print(filter_strings(user_input))
 
 def filter_strings(array):
     result_array = []
     for string in array:
         if len(string) <= 3:
             result_array.append(string)
-    return result_array        
-    
-print(filter_strings(array))
+    return result_array      
+
+main()
